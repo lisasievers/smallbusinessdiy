@@ -1,2 +1,2 @@
 # smallbusinessdiy
-this  project is test
+This project is test and build check with docker.
