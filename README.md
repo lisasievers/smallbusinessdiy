@@ -1,2 +1,2 @@
 # smallbusinessdiy
-This project is represent to develop sitebuilder easyily and website reports.
+This project is represent to develop websites very easy and generate reports.
