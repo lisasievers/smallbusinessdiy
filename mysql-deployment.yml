@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: smbdiy-cluster
+  labels:
+    app: directed-cove-135122
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: directed-cove-135122
+        tier: mysql
+    spec:
+      containers:
+      - image: us.gcr.io/directed-cove-135122/php:v1
+        name: mysql
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim

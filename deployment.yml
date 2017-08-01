@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: smbdiy-cluster
+  labels:
+    #Project ID
+    app: directed-cove-135122
+spec:
+  #Run two instances of our application
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: directed-cove-135122
+    spec:
+      #Container details
+      containers:
+        - name: smbdiy-cluster
+          image: us.gcr.io/directed-cove-135122/php:v1
+          imagePullPolicy: Always
+          #Ports to expose
+          ports:
+          - containerPort: 80

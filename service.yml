@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  #Service name
+  name: smbdiy-cluster
+spec:
+  selector:
+    app: directed-cove-135122
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3306
+  type: LoadBalancer
