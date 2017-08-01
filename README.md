@@ -1,2 +1,2 @@
 # smallbusinessdiy
-This project is test and build check with docker.
+This project is represent to develop sitebuilder easyily and website reports.
